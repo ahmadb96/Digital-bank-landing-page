@@ -1,0 +1,95 @@
+*{
+  outline: solid 1px rgb(69, 146, 223);
+  
+}
+body{
+  width: 1200px;
+  margin: 0 auto;
+}
+/* --------------استایل قالب اصلی هدر-------------- */
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__menu li{
+  display: inline-block;
+}
+
+
+/* -----------استایل دهی بدنه اصلی لندینگ پیج-------------- */
+
+/* استیایل سکشن اول بدنه موکاپ موبایل */
+.hero-section{
+  display: flex;
+  flex-direction: row;
+}
+.hero-section__img{
+  display: flex;
+  flex-direction: row;
+  background: url(/images/bg-intro-desktop.svg);
+}
+.hero-section__img--mockup{
+  width: 400px;
+}
+.hero-section__content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* سکشن ویژگی های سایت بصورت باکس آیکن */
+.features__box-icon{
+  display: flex;
+}
+
+/* سکشن بلاگ صفحه اصلی */
+.blog__list{
+  
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+
+}
+.blog__list--post>img{
+  width: 200px;
+}
+
+/* --------------------استایل فوتر سایت------------------- */
+
+footer{
+  display: flex;
+  justify-content: space-between;
+  background-color: #2D314E;
+  color: white;
+}
+.footer-logo{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.footer-list li{
+  list-style: none;
+}
+.footer-btn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* ----------استایل دهی نسخه موبایل------------- */
+@media (max-width: 768px){
+  body{
+    width: 100%;
+    
+  }
+  .header, .hero-section,  .features__box-icon, .blog__list, .footer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+}
