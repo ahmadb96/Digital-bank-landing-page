@@ -7,11 +7,14 @@ body{
   margin: 0 auto;
 }
 /* --------------استایل قالب اصلی هدر-------------- */
-/* هدر دکستاپ */
+/* -------هدر دسکتاپ------ */
 .header-desktop{
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+/* عدم نمایش هدر موبایل در دسکتاپ */
+.header-mobile{
   display: none;
 }
 
@@ -19,10 +22,16 @@ body{
   display: inline-block;
 }
 
-/* هدر موبایل */
-.header-mobile{
-  display: flex;
-  justify-content: space-between;
+/* -----هدر موبایل----- */
+@media (max-width: 768px){
+  .header-desktop{
+    display: none;
+  }
+  .header-mobile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
 }
 
 
@@ -88,13 +97,13 @@ footer{
   align-items: flex-end;
 }
 
-/* ----------استایل دهی نسخه موبایل------------- */
+/* ----------استایل دهی بدنه در نسخه موبایل------------- */
 @media (max-width: 768px){
   body{
     width: 100%;
     
   }
-  .header, .hero-section,  .features__box-icon, .blog__list, .footer {
+  .hero-section,  .features__box-icon, .blog__list, .footer {
     display: flex;
     flex-direction: column;
   }
