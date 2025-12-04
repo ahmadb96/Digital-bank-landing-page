@@ -102,8 +102,8 @@ main , footer , header{
   width: 100%;
 }
 
-/* استایل دکمه هدر نسخه دسکتاپ */
-.header__btn button {
+/* استایل دکمه در تمام لندینگ */
+button {
   padding: var(--Padding-btn);
   border-radius: var(--Border-radius);
   color: var(--color);
@@ -111,7 +111,7 @@ main , footer , header{
   border: none;
 }
 
-.header__btn button:hover {
+button:hover {
   background: var(--Background-hover);
   cursor: pointer;
 }
@@ -161,19 +161,6 @@ main , footer , header{
 
 .hero-section__content--text>p {
   color: var(--Text-color);
-}
-
-.hero-section__content--text>button {
-  padding: var(--Padding-btn);
-  border-radius: var(--Border-radius);
-  color: var(--color);
-  background: var(--Background);
-  border: none;
-}
-
-.hero-section__content--text>button:hover {
-  background: var(--Background-hover);
-  cursor: pointer;
 }
 
 /* --------استایل هیرو سکشن نسخه موبایل------- */
@@ -232,6 +219,15 @@ main , footer , header{
   margin-top: 50px;
   display: flex;
   gap: 50px;
+}
+/* .features__box-icon--single{
+  display: flex;
+        flex-direction: column;
+        align-items: center;
+} */
+.features__box-icon--single img{
+  width: 100px;
+  margin: 0 auto;
 }
 .features__box-icon--single h3{
  font-size: 1.5rem;
@@ -301,19 +297,55 @@ margin: 0 auto;
 .footer-logo {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+.logo{
+  width: 100%;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.footer-logo__socialmedia{
+  display: flex;
   justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  gap: 10px;
 }
-
-.footer-list li {
+.footer-list a {
+  text-decoration: none;
+  color: var(--Text-color);
+  cursor: pointer;
+  
+}
+.footer-list li{
   list-style: none;
+  margin: 20px 0;
 }
-
+.footer-list a:hover{
+  color: rgb(98, 199, 165);
+}
+.footer-list ul{
+  padding-inline-start: 0;
+}
 .footer-btn {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+}
+.footer-btn p{
+  color: var(--Text-color);
+}
+
+/* ---------استایل فوتر در نسخه موبایل--------- */
+@media (max-width: 768px){
+  .footer-btn {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  
+}
 }
 
 /* ----------استایل دهی بدنه در نسخه موبایل------------- */
@@ -332,7 +364,6 @@ margin: 0 auto;
   .hero-section__content {
     display: flex;
     flex-direction: column;
-    align-items: center !important;
     text-align: center;
   }
 
@@ -358,7 +389,6 @@ margin: 0 auto;
 
 /* دکمه همبرگری */
 .menu-toggle {
-  font-size: 24px;
   background: none;
   border: none;
   cursor: pointer;
