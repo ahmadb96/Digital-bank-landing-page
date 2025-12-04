@@ -12,8 +12,8 @@
 
 body {
   width: 1600px;
-  margin: 0 auto;
   font-family: "DMSans", sans-serif;
+  margin: 0 auto;
 }
 
 /* فونت پروژه */
@@ -23,7 +23,11 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-
+main , header , footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /* --------------استایل قالب اصلی هدر-------------- */
 /* -------هدر دسکتاپ------ */
 .header-desktop {
@@ -227,7 +231,7 @@ body {
 }
 
 /* --------------------استایل فوتر سایت------------------- */
-footer {
+.footer {
   width: 1200px;
   max-width: 100%;
   padding: var(--Padding-layout);
