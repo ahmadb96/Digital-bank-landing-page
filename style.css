@@ -7,10 +7,11 @@
   --Border-radius: 50px;
   --Padding: 10px;
   --Padding-btn: 15px 30px;
+  --Padding-layout: 50px;
 }
 
 body {
-  width: 1200px;
+  width: 1600px;
   margin: 0 auto;
   font-family: "DMSans", sans-serif;
 }
@@ -26,17 +27,19 @@ body {
 /* --------------استایل قالب اصلی هدر-------------- */
 /* -------هدر دسکتاپ------ */
 .header-desktop {
+  width: 1200px;
+  max-width: 100%;
   display: flex;
-  justify-content: space-around;
+  padding: 0 50px;
+  justify-content: space-between;
   align-items: center;
   background-color: var(--color);
-  z-index: 11;
+  
 }
 
 /* عدم نمایش هدر موبایل در دسکتاپ */
 .header-mobile {
   display: none;
-  
 }
 
 /* ----- ریسپانسیو هدر موبایل----- */
@@ -56,7 +59,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 15px;
-    
+
   }
 }
 
@@ -112,17 +115,20 @@ body {
 
 /* استیایل هیرو سکشن موکاپ موبایل */
 .hero-section {
+  width: 1200px;
+  max-width: 100%;
   display: flex;
-  flex-direction: row;
   background-color: #FAFAFA;
+  padding: 0 50px;
+  background: url(/images/bg-intro-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 700px;
+  background-position: 125% 10px;
 }
 
 .hero-section__img {
   display: flex;
-  flex-direction: row;
-  background: url(/images/bg-intro-desktop.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  
 }
 
 .hero-section__img--mockup {
@@ -135,32 +141,37 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
-.hero-section__content--text{
+
+.hero-section__content--text {
   width: 50%;
 }
-.hero-section__content--text>h2{
+
+.hero-section__content--text>h2 {
   font-size: 3rem;
   color: var(--H2-color);
   font-weight: 500;
 }
-.hero-section__content--text>p{
+
+.hero-section__content--text>p {
   color: var(--Text-color);
 }
-.hero-section__content--text>button{
+
+.hero-section__content--text>button {
   padding: var(--Padding-btn);
   border-radius: var(--Border-radius);
   color: var(--color);
   background: var(--Background);
   border: none;
 }
-.hero-section__content--text>button:hover{
+
+.hero-section__content--text>button:hover {
   background: var(--Background-hover);
   cursor: pointer;
 }
+
 /* --------استایل هیرو سکشن نسخه موبایل------- */
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .hero-section__img {
     width: 100%;
     overflow: hidden;
@@ -169,29 +180,43 @@ body {
     background: url(/images/bg-intro-desktop.svg);
     background-repeat: no-repeat;
     background-size: cover;
-}
+  }
+
   .hero-section__img--mockup {
     width: 100%;
     transform: translateY(-50px);
-}
-.hero-section__content--text{
-  width: 100%;
-  padding-bottom: 30px;
+  }
 
-}
-.hero-section__content--text>h2{
-  font-size: 2.5rem;
-  color: var(--H2-color);
-  font-weight: 500;
-}
-}
+  .hero-section__content--text {
+    width: 100%;
+    padding-bottom: 30px;
 
-/* سکشن ویژگی های سایت باکس آیکن */
+  }
+
+  .hero-section__content--text>h2 {
+    font-size: 2.5rem;
+    color: var(--H2-color);
+    font-weight: 500;
+  }
+}
+ 
+/* =====================سکشن آیکن باکس ویژگی های سایت=========================== */
+.features{
+  width: 1200px;
+  max-width: 100%;
+  background-color: #F4F5F7;
+  padding: var(--Padding-layout);
+}
 .features__box-icon {
   display: flex;
 }
 
 /* سکشن بلاگ صفحه اصلی */
+.blog{
+  width: 1200px;
+  max-width: 100%;
+  padding: var(--Padding-layout);
+}
 .blog__list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -203,6 +228,9 @@ body {
 
 /* --------------------استایل فوتر سایت------------------- */
 footer {
+  width: 1200px;
+  max-width: 100%;
+  padding: var(--Padding-layout);
   display: flex;
   justify-content: space-between;
   background-color: #2D314E;
@@ -319,7 +347,8 @@ footer {
 .overlay {
   position: fixed;
   inset: 0;
-  background: linear-gradient(183deg,rgba(9, 9, 121, 0.6) 11%, rgba(255, 255, 255, 0.3) 100%);  opacity: 0;
+  background: linear-gradient(183deg, rgba(9, 9, 121, 0.6) 11%, rgba(255, 255, 255, 0.3) 100%);
+  opacity: 0;
   visibility: hidden;
   transition: 0.3s ease;
   z-index: 999;
