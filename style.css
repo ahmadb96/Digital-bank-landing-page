@@ -125,7 +125,7 @@ main , footer , header{
   display: flex;
   background-color: #FAFAFA;
   padding: var(--Padding-layout);
-  background: url(/images/bg-intro-desktop.svg);
+  background-image: url(/images/bg-intro-desktop.svg);
   background-repeat: no-repeat;
   background-size: 700px;
   background-position: 125% 10px;
@@ -137,8 +137,9 @@ main , footer , header{
 }
 
 .hero-section__img--mockup {
-  width: 400px;
-  transform: translateY(50px);
+  width: 100%;
+  margin-bottom: -130px;
+  z-index: 100;
 }
 
 /* -----هیرو سکشن بخش محتوا--- */
@@ -149,7 +150,7 @@ main , footer , header{
 }
 
 .hero-section__content--text {
-  width: 50%;
+  width: 70%;
 }
 
 .hero-section__content--text>h2 {
@@ -179,11 +180,11 @@ main , footer , header{
 @media (max-width: 768px) {
   .hero-section{
     width: 100%;
-    background: url(/images/bg-intro-desktop.svg);
+    background: #FAFAFA url(/images/bg-intro-desktop.svg);
     background-repeat: no-repeat;
     background-size: 600px;
-  background-position: 20% -40%;
-      overflow: hidden;
+    background-position: 20% -40%;
+    overflow: hidden;
 
   }
   .hero-section__img {
@@ -219,8 +220,26 @@ main , footer , header{
   background-color: #F4F5F7;
   padding: var(--Padding-layout);
 }
+.features__title h2{
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--H2-color);
+}
+.features__title p{
+  color: var(--Text-color);
+}
 .features__box-icon {
+  margin-top: 50px;
   display: flex;
+  gap: 50px;
+}
+.features__box-icon--single h3{
+ font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--H2-color);
+}
+.features__box-icon--single p{
+  color: var(--Text-color);
 }
 
 /* -----------سکشن بلاگ صفحه اصلی----------------- */
@@ -228,14 +247,44 @@ main , footer , header{
   width: 100%;
   max-width: 1200px;
   padding: var(--Padding-layout);
+  background-color: #FAFAFA;
+}
+.blog h2{
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--H2-color);
 }
 .blog__list {
   display: grid;
+  gap: 30px;
   grid-template-columns: repeat(4, 1fr);
+}
+.blog__list--post{
+  background-color: #ffffff;
+  border-radius: 10px;
 }
 
 .blog__list--post>img {
-  width: 200px;
+  width: 100%;
+  height: 200px;
+  border-radius: 10px 10px 0px 0px;
+}
+.blog__list--post-content{
+width: 100%;
+max-width: 85%;
+margin: 0 auto;
+}
+.blog__list--post-content h3{
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--H2-color);
+}
+.blog__list--post-content h3:hover{
+ color: rgb(98, 199, 165);
+ cursor: pointer;
+}
+.blog__list--post-content p{
+ color: var(--Text-color);
 }
 
 /* --------------------استایل فوتر سایت------------------- */
