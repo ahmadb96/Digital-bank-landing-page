@@ -5,7 +5,6 @@
   --Background: linear-gradient(90deg, rgba(42, 186, 204, 1) 0%, rgba(87, 199, 133, 1) 100%);
   --Background-hover: linear-gradient(90deg, rgba(42, 186, 204, 0.66) 0%, rgba(87, 199, 133, 0.56) 100%);
   --Border-radius: 50px;
-  --Padding: 10px;
   --Padding-btn: 15px 30px;
   --Padding-layout: clamp(16px, 4vw, 32px);
 }
@@ -37,7 +36,7 @@ main , footer , header{
   width: 100%;
   max-width: 1200px;
   display: flex;
-  padding: 0 50px;
+  padding: var(--Padding-layout);
   justify-content: space-between;
   align-items: center;
   background-color: var(--color);
@@ -54,7 +53,7 @@ main , footer , header{
   body {
     width: 100%;
     box-sizing: border-box;
-    padding: 0 15px;
+    /* padding: 0 15px; */
   }
 
   .header-desktop {
@@ -65,7 +64,7 @@ main , footer , header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px;
+    padding: var(--Padding-layout);
 
   }
 }
@@ -84,9 +83,8 @@ main , footer , header{
 
 .header__menu li {
   position: relative;
-  padding: var(--padding);
+  padding: 20px;
   display: inline-block;
-  padding: var(--Padding);
 }
 
 .header__menu li::after {
@@ -126,7 +124,7 @@ main , footer , header{
   max-width: 1200px;
   display: flex;
   background-color: #FAFAFA;
-  padding: 0 50px;
+  padding: var(--Padding-layout);
   background: url(/images/bg-intro-desktop.svg);
   background-repeat: no-repeat;
   background-size: 700px;
@@ -179,14 +177,21 @@ main , footer , header{
 
 /* --------استایل هیرو سکشن نسخه موبایل------- */
 @media (max-width: 768px) {
+  .hero-section{
+    width: 100%;
+    background: url(/images/bg-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 600px;
+  background-position: 20% -40%;
+      overflow: hidden;
+
+  }
   .hero-section__img {
     width: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: row;
-    background: url(/images/bg-intro-desktop.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
+   
   }
 
   .hero-section__img--mockup {
